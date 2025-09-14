@@ -1,0 +1,48 @@
+# Development files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Test files
+tests/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Documentation
+docs/
+README.md
+TODO.md
+changes.md
+DEPLOYMENT.md
+
+# Examples
+examples/
+
+# Scripts
+scripts/
+
+# Figma integration
+figma-mcp-config.json
+
+# Backup files
+*.backup
+*.backup2
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
