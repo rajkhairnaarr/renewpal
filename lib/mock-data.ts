@@ -1,6 +1,20 @@
-import { Renewal } from "@/types/supabase"
+type MockRenewal = {
+  id: string
+  name: string
+  category: string
+  status: string
+  renewal_date: string
+  amount: number
+  owner: {
+    id: string
+    full_name: string
+    avatar_url: string
+  }
+  organization_id: string
+  created_at: string
+}
 
-export const mockRenewals: Renewal[] = [
+export const mockRenewals: MockRenewal[] = [
   {
     id: "1",
     name: "Adobe Creative Cloud",
