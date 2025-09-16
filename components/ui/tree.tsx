@@ -16,7 +16,7 @@ interface TreeItem {
 interface TreeProps {
   items: TreeItem[]
   onItemClick?: (item: TreeItem) => void
-  onToggle?: (item: TreeItem) => void
+  onToggleItem?: (item: TreeItem) => void
   className?: string
 }
 
@@ -26,9 +26,9 @@ const TreeItem = React.forwardRef<
     item: TreeItem
     level?: number
     onItemClick?: (item: TreeItem) => void
-    onToggle?: (item: TreeItem) => void
+    onToggleItem?: (item: TreeItem) => void
   }
->(({ item, level = 0, onItemClick, onToggle, className, ...props }, ref) => {
+>(({ item, level = 0, onItemClick, onToggleItem, className, ...props }, ref) => {
   const hasChildren = item.children && item.children.length > 0
   const isOpen = item.isOpen ?? false
 
@@ -48,7 +48,7 @@ const TreeItem = React.forwardRef<
           <button
             onClick={(e) => {
               e.stopPropagation()
-              onToggle?.(item)
+              onToggleItem?.(item)
             }}
             className="p-0.5 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
           >
@@ -85,7 +85,7 @@ const TreeItem = React.forwardRef<
               item={child}
               level={level + 1}
               onItemClick={onItemClick}
-              onToggle={onToggle}
+              onToggleItem={onToggleItem}
             />
           ))}
         </div>
@@ -96,7 +96,7 @@ const TreeItem = React.forwardRef<
 TreeItem.displayName = "TreeItem"
 
 const Tree = React.forwardRef<HTMLDivElement, TreeProps>(
-  ({ items, onItemClick, onToggle, className, ...props }, ref) => {
+  ({ items, onItemClick, onToggleItem, className, ...props }, ref) => {
     return (
       <div ref={ref} className={cn("space-y-1", className)} {...props}>
         {items.map((item) => (
@@ -104,7 +104,7 @@ const Tree = React.forwardRef<HTMLDivElement, TreeProps>(
             key={item.id}
             item={item}
             onItemClick={onItemClick}
-            onToggle={onToggle}
+            onToggleItem={onToggleItem}
           />
         ))}
       </div>

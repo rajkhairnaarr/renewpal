@@ -160,7 +160,7 @@ export default function ComponentsDemoPage() {
           <CardContent>
             <Tree
               items={treeItems}
-              onToggle={handleTreeToggle}
+              onToggleItem={handleTreeToggle}
               className="border rounded-lg p-4"
             />
           </CardContent>
