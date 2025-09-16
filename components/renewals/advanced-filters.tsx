@@ -124,8 +124,8 @@ export function AdvancedFilters({
                 <SelectContent>
                   <SelectItem value="">All categories</SelectItem>
                   {RENEWAL_CATEGORIES.map(category => (
-                    <SelectItem key={category.value} value={category.value}>
-                      {category.label}
+                    <SelectItem key={category} value={category}>
+                      {category}
                     </SelectItem>
                   ))}
                 </SelectContent>
