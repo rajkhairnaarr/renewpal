@@ -50,7 +50,7 @@ export const identifyUser = (userId: string, properties?: Record<string, any>) =
 
 export const setUserProperties = (properties: Record<string, any>) => {
   if (typeof window !== 'undefined') {
-    posthog.set(properties)
+    posthog.register(properties)
   }
 }
 
