@@ -307,7 +307,7 @@ export default function ComponentsDemoPage() {
                   <TooltipTrigger asChild>
                     <Button variant="outline">Success Tooltip</Button>
                   </TooltipTrigger>
-                  <TooltipContent variant="success">
+                  <TooltipContent>
                     <p>Success message</p>
                   </TooltipContent>
                 </Tooltip>
@@ -318,7 +318,7 @@ export default function ComponentsDemoPage() {
                   <TooltipTrigger asChild>
                     <Button variant="outline">Warning Tooltip</Button>
                   </TooltipTrigger>
-                  <TooltipContent variant="warning">
+                  <TooltipContent>
                     <p>Warning message</p>
                   </TooltipContent>
                 </Tooltip>
@@ -329,7 +329,7 @@ export default function ComponentsDemoPage() {
                   <TooltipTrigger asChild>
                     <Button variant="outline">Error Tooltip</Button>
                   </TooltipTrigger>
-                  <TooltipContent variant="error">
+                  <TooltipContent>
                     <p>Error message</p>
                   </TooltipContent>
                 </Tooltip>
